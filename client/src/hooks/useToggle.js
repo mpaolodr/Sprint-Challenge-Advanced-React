@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
-const useToggle = (key, target) => {
+export const useToggle = (key, target) => {
   const [value, setValue] = useLocalStorage(key, false);
 
   useEffect(() => {
@@ -18,5 +18,5 @@ const useToggle = (key, target) => {
     setValue(!value);
   };
 
-  return [value, setValue];
+  return [value, setter];
 };
