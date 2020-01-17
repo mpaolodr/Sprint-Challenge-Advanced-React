@@ -1,9 +1,14 @@
 import React from "react";
 
+//components
+import PlayerCard from "./PlayerCard";
+
 const Players = ({ data }) => {
   return (
     <div className="players-container">
-      <h2>players here</h2>
+      {data.map(player => {
+        return <PlayerCard player={player} key={player.id} />;
+      })}
     </div>
   );
 };
