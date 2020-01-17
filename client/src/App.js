@@ -1,6 +1,9 @@
 import React from "react";
 import "./App.css";
 
+//components
+import Players from "./components/Players";
+
 class App extends React.Component {
   constructor() {
     super();
@@ -21,7 +24,7 @@ class App extends React.Component {
     console.log(this.state.data);
     return (
       <div className="App">
-        <h2>component here</h2>
+        <Players data={this.state.data} />
       </div>
     );
   }
