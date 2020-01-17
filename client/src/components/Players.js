@@ -10,7 +10,7 @@ const Players = ({ data }) => {
     "players-container"
   );
   return (
-    <div className="players-container">
+    <div className="players-container" data-testid="players-container">
       {data.map(player => {
         return <PlayerCard player={player} key={player.id} />;
       })}
@@ -18,6 +18,7 @@ const Players = ({ data }) => {
         className={
           toggleVal ? `toggle-container ${toggleVal}` : "toggle-container"
         }
+        data-testid="players-container-toggle"
       >
         <div
           className={toggleVal ? `toggle-circle ${toggleVal}` : "toggle-circle"}

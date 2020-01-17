@@ -23,7 +23,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1 className="title">Women's World Cup Players</h1>
+        <h1 className="title" data-testid="title">
+          Women's World Cup Players
+        </h1>
         <Players data={this.state.data} />
       </div>
     );
