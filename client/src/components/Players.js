@@ -12,7 +12,13 @@ const Players = ({ data }) => {
   return (
     <div className="players-container" data-testid="players-container">
       {data.map(player => {
-        return <PlayerCard player={player} key={player.id} />;
+        return (
+          <PlayerCard
+            player={player}
+            key={player.id}
+            data-testid="ind-player"
+          />
+        );
       })}
       <div
         className={

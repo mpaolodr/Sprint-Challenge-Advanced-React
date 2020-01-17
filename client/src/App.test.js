@@ -1,7 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import App from "./App";
-import PlayerCard from "./components/PlayerCard";
 
 test("renders without crashing", () => {
   render(<App />);
@@ -20,4 +19,9 @@ test("renders players-container", () => {
 test("renders players-container-toggle", () => {
   const { getByTestId } = render(<App />);
   getByTestId("players-container-toggle");
+});
+
+test("renders ind-toggle", () => {
+  const container = render(<App />);
+  container.getByTestId("ind-player");
 });
